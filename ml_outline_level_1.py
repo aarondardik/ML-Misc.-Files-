@@ -118,3 +118,14 @@ class ConvolutionalLayer(object):
         self.params = None
 
 
+if __name__ == "__main__":
+    # load the data from the file
+    data = load_data("C:/Users/aarondardik/Desktop/marks.txt", None)
+
+    # X = feature values, all the columns except the last column
+    X = data.iloc[:, :-1]
+
+    # y = target values, last column of the data frame
+    y = data.iloc[:, -1]
+
+    
