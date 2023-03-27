@@ -3,6 +3,7 @@ import numpy as np
 import pickle
 import theano
 from numpy import random
+import pandas as pd 
 
 
 class Network(object):
@@ -87,13 +88,6 @@ class Network(object):
         #the network, note the choice of cost function is important
         return None
     
-    def pickle_network(self, input_vector):
-        #Will be used to save the network to a file
-        return None
-    
-    def unpickle_network(self, input_vector):
-        #Open a file with a given filename
-        return None
     
     def sigmoid(x):
         return 1.0 / (1.0 + np.exp(-x))
@@ -112,13 +106,23 @@ class QuadraticCost(object):
         return (a-y) * sigmoid_prime(z)
 
 
-#To be filled in by Aaron
+##If a Convolutional Layer is Needed
 class ConvolutionalLayer(object):
     def __init__(self):
         self.params = None
 
 
 if __name__ == "__main__":
+    
+    num_layers = input("How many layers will be in your neural network?")
+    sizes = []
+    for (i in range(num_layers)):
+        sizes.append(input("How may neurons will layer {0} have?".format(i)))
+    
+    neuralNet = Network(sizes)
+        
+                       
+    ##THE BELOW PART OF MAIN IS UNFINISHED
     # load the data from the file
     data = load_data("C:/Users/aarondardik/Desktop/marks.txt", None)
 
