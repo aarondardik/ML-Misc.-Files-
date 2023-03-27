@@ -137,3 +137,23 @@ ab = weighted_obj.predict_value()
 print(ab)
 #weighted_obj.plot_projection_graph(rate, n_loo, t, 1)
 
+
+
+
+if __name__ == "__main__":
+    # load the data from the file
+    data = load_data(/r"INSERT_PATH_HERE", None)
+
+    # X = feature values, all the columns except the last column
+    X = data.iloc[:, :-1]
+
+    # y = target values, last column of the data frame
+    y = data.iloc[:, -1]
+
+    
+
+    # plots
+    #plt.scatter(admitted.iloc[:, 0], admitted.iloc[:, 1], s=10, label='Admitted')
+    #plt.scatter(not_admitted.iloc[:, 0], not_admitted.iloc[:, 1], s=10, label='Not Admitted')
+    #plt.legend()
+    #plt.show()
