@@ -6,6 +6,9 @@ from numpy import random
 import pandas as pd 
 
 
+##In addition to the Network class below, a class which cleans and organizes the data is needed, as well as a class or function that performs train-test split. 
+##Additionally, multiple accuracy metrics are needed.
+
 class Network(object):
     def __init__(self, sizes, cost=QuadraticCost):
         self.num_layers = len(sizes)
